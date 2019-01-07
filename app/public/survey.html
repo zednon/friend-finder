@@ -1,0 +1,190 @@
+<!-- Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5
+     based on how much the user agrees or disagrees with a question. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+    <h1>Select youre answers to find youre friends</h1>
+    <h3>Take this quiz and get friend matches</h3>
+  
+        <div class="row">
+
+            <div class="col-12">
+      
+              <div class="card">
+                <div class="card-header">  
+                    <h3><strong>Add your self to take quiz</strong></h3>
+          </div>
+          <div class="card-body">
+            <form  id="questions">        
+                <div class="form-group">
+                    <label for="role">Name</label>
+                    <input type="text" class="form-control" id="Name" placeholder="Name First and Last">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="age">Upload photo</label>
+                    <input type="text" class="form-control" id="age" placeholder="Link to phto">
+                  </div>
+    
+
+            
+
+
+
+        <select class= "chosen-select"   id = "Q1">
+          <option value="" disabled selected>Where would you rather live?</option>
+          <option  value="1">a city</option>
+          <option  value="2">country</option>
+          <option  value="3">woods</option>
+          <option  value="4">small town</option>
+          <option  value="5">suburns</option>
+        </select>
+        <select  class= "chosen-select"  id = "Q2">
+            <option value="" disabled selected>What do you like to drink?</option>
+            <option  value="1">coffee</option>
+            <option  value="2">water</option>
+            <option  value="3">tea</option>
+            <option  value="4">whiskey</option>
+            <option  value="5">soda</option>
+          </select>
+          <select  class= "chosen-select" id = "Q3">
+              <option value="" disabled selected>What is you favort style?</option>
+              <option  value="1">Goth</option>
+              <option  value="2">Steampunk</option>
+              <option  value="3">trendy</option>
+              <option  value="4">retro</option>
+              <option  value="5">cosplay</option>
+            </select>
+            <select class= "chosen-select"  id = "Q4">
+                <option value="" disabled selected>What is youre hogwarts house?</option>
+                <option  value="1">Muggle</option>
+                <option  value="2">Ravenclaw</option>
+                <option  value="3">Hufflepuff</option>
+                <option  value="4">Slythern</option>
+                <option  value="5">Giffendorr</option>
+              </select>
+              <select  class= "chosen-select" id = "Q5">
+                  <option value="" disabled selected>Out of these choices whos youre super hero?</option>
+                  <option  value="1">Ms. Marvel</option>
+                  <option  value="2">Super Girl</option>
+                  <option  value="3">Squirl Girl</option>
+                  <option  value="4">Black Widow</option>
+                  <option  value="5">Cat Women</option>
+                </select>
+                 <select  class= "chosen-select"  id = "Q6">
+                  <option value="" disabled selected>Which pet would you choice?</option>
+                  <option  value="1">dog</option>
+                  <option  value="2">cat</option>
+                  <option  value="3">rabbit</option>
+                  <option  value="4">bird</option>
+                  <option  value="5">fish</option>
+                </select>
+                <select  class= "chosen-select" id = "Q7">
+                  <option value="" disabled selected>Which disney park is your favort?</option>
+                  <option  value="1">Disney World</option>
+                  <option  value="2">DisneyLand</option>
+                  <option  value="3">Magical Kingdom</option>
+                  <option  value="4">Epcot</option>
+                  <option  value="5">Calforia Avencher </option>
+                </select>
+                <select class= "chosen-select"  id = "Q8">
+                  <option value="" disabled selected>Which type of book do you read?</option>
+                  <option  value="1">YAI</option>
+                  <option  value="2">Mystery</option>
+                  <option  value="3">Non-fiction</option>
+                  <option  value="4">Fiction</option>
+                  <option  value="5">Sci-fi</option>
+                </select>
+                <select  class= "chosen-select"  id = "Q9">
+                  <option value="" disabled selected>What type of food do you like?</option>
+                  <option  value="1">Spicy</option>
+                  <option  value="2">Sweet</option>
+                  <option  value="3">Salt</option>
+                  <option  value="4">Crunchy</option>
+                  <option  value="5">Anything</option>
+                </select>
+                <select  class= "chosen-select"   id = "Q10">
+                  <option value="" disabled selected>Which type of Game do you like to play?</option>
+                  <option  value="1">Video Game</option>
+                  <option  value="2">Board Game</option>
+                  <option  value="3">Sport Game</option>
+                  <option  value="4">Drinking Game</option>
+                  <option  value="5">Any type of Game</option>
+                </select>
+
+          
+               
+   
+   
+   
+   
+                <button type="submit">Submit</button>
+
+
+
+     
+     
+
+
+</form>
+
+
+    </div>
+
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+$("#questions").on("submit" , function(event){
+  event.preventDefault()
+
+var myvals = {
+  q1: $("#Q1").val(), 
+  q2: $("#Q2").val(),
+  q3: $("#Q3").val(),
+  q4: $("#Q4").val(),
+  q5: $("#Q5").val(),
+  q6: $("#Q6").val(),
+  q7: $("#Q7").val(),
+  q8: $("#Q8").val(),
+  q9: $("#Q9").val(),
+  q10: $("#Q10").val(),
+}
+
+
+console.log(myvals)
+//POST myvals to the server
+
+$.ajax({
+  method: "POST", 
+  url:"/newfriend",
+  data: myvals, 
+})
+.then(function(respond){
+  console.log(respond)
+})
+
+
+})
+
+
+
+
+</script>
