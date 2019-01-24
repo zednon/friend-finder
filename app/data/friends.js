@@ -21,46 +21,39 @@ let user = [
         "name":"Tom",
         "photo": "/app/photo1.jpg",
         "scores" : [
-        5,
-        1,
-        4,
-        4,
-        5,
         1,
         2,
-        5,
         4,
+        2,
+        1,
+        3,
+        4,
+        2,
+        2,
         1
             ]
-        }
-
+        }, 
+        {
+            "name":"valk",
+            "photo": "/app/photo1.jpg",
+            "scores" : [
+            2,
+            2,
+            3,
+            2,
+            4,
+            3,
+            1,
+            2,
+            3,
+            1
+                ]
+            }
 
 ]
 
 var difference = []
 
-
-function FrindMath(){
-
-    for (let i = 0; i < friends.length; i++) {
-    for (let j = 0; j < friends[i].scores.length; j++) {
-        // console.log(friends[i].scores[j]);
-        console.log("my val:" + myvals[j]);
-        console.log("friend val:" + friends[i].scores[j]);
-
-        difference.push(Math.abs(myvals[j] - friends[i].scores[j]))
-    }  
-}
-}
-
-
-let mathFriends = [] 
-
-// split difference array into small arrays
-// each array is a friend
-// add each friend array
-// array that is the smallest number is your chosenFriend
-// res.send(chosenFriend)
 
 console.log("friends scores calculated against my scores:" + difference);
 module.exports=user

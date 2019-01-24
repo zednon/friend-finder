@@ -11,5 +11,5 @@ app.use(htmlroutes)
 var apiroutes = require("./app/routing/apiRoutes.js")
 app.use(apiroutes)
 
-app.listen(3000)
+app.listen(process.env.PORT||3000)
 
