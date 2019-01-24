@@ -31,18 +31,18 @@ router.post("/choosenfriend" ,  function(req, res){
  
  
  
-    for (let j = 0; j < friends[i].scores.length; j++) {
-        // console.log(friends[i].scores[j]);
-        console.log("my val:" + myvals[j]);
-        console.log("friend val:" + friends[i].scores[j]);
+//     for (let j = 0; j < friends[i].scores.length; j++) {
+//         // console.log(friends[i].scores[j]);
+//         console.log("my val:" + myvals[j]);
+//         console.log("friend val:" + friends[i].scores[j]);
 
-        let EachfreindTotal += Math.abs(myvals[j] - friends[i].scores[j])
+//         let EachfreindTotal += Math.abs(myvals[j] - friends[i].scores[j])
 
-        // EachfriendTotal += 2
+//         // EachfriendTotal += 2
 
-         }  
-  console.log(friends[i].name) 
-         console.log(EachfriendTotal);
+//          }  
+//   console.log(friends[i].name) 
+//          console.log(EachfriendTotal);
     }
 
 
